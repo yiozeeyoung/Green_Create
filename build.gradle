@@ -111,15 +111,23 @@ repositories {
 }
 
 dependencies {
+    implementation "net.neoforged:neoforge:${neo_version}"
     compileOnly("me.fallenbreath:conditional-mixin-neoforge:${conditional_mixin_version}")
-    implementation("plus.dragons.createdragonsplus:create-dragons-plus-${minecraft_version}:${create_dragons_plus_version}")
-
+//create
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}") { transitive = false }
+    implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${flywheel_minecraft_version}:${flywheel_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${flywheel_minecraft_version}:${flywheel_version}")
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+//jei
     compileOnly("mezz.jei:jei-${jei_minecraft_version}-common-api:${jei_version}")
     compileOnly("mezz.jei:jei-${jei_minecraft_version}-neoforge-api:${jei_version}")
     localRuntime("mezz.jei:jei-${jei_minecraft_version}-neoforge:${jei_version}")
-
+//curios
     compileOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}+${curios_minecraft_version}:api")
     localRuntime("top.theillusivec4.curios:curios-neoforge:${curios_version}+${curios_minecraft_version}")
+//sodium
+    compileOnly("maven.modrinth:sodium:mc${minecraft_version}-${sodium_version}-neoforge")
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
