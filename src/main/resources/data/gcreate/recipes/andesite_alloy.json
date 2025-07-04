@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AIA",
+    "IAI",
+    "AIA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:andesite"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "gcreate:andesite_alloy",
+    "count": 2
+  }
+}

@@ -78,6 +78,8 @@ public class GCreate
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
+        // Register our AllItems items
+        AllItems.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
@@ -111,6 +113,10 @@ public class GCreate
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
+        
+        // 添加安山合金到示例标签页
+        if (event.getTabKey() == EXAMPLE_TAB.getKey())
+            event.accept(AllItems.ANDESITE_ALLOY);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

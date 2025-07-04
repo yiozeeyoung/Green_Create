@@ -1,5 +1,6 @@
 {
-  "itemGroup.gcreate": "Example Mod Tab",
+  "itemGroup.gcreate": "Green Create",
   "block.gcreate.example_block": "Example Block",
-  "item.gcreate.example_item": "Example Item"
+  "item.gcreate.example_item": "Example Item",
+  "item.gcreate.andesite_alloy": "Andesite Alloy"
 }
